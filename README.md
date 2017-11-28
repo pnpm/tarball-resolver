@@ -1,5 +1,7 @@
 # @pnpm/tarball-resolver
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/pnpm/tarball-resolver.svg)](https://greenkeeper.io/)
+
 > Resolver for tarball dependencies
 
 <!--@shields('npm', 'travis')-->
