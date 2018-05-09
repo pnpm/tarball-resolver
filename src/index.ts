@@ -1,8 +1,9 @@
+import {ResolveResult} from '@pnpm/resolver-base'
 import parseNpmTarballUrl from 'parse-npm-tarball-url'
 
 export default async function resolveTarball (
   wantedDependency: {pref: string},
-) {
+): Promise<ResolveResult | null> {
   if (!wantedDependency.pref.startsWith('http:') && !wantedDependency.pref.startsWith('https:')) {
     return null
   }
@@ -16,6 +17,7 @@ export default async function resolveTarball (
         resolution: {
           tarball: wantedDependency.pref,
         },
+        resolvedVia: 'url',
       }
     }
   }
@@ -31,5 +33,6 @@ export default async function resolveTarball (
     resolution: {
       tarball: wantedDependency.pref,
     },
+    resolvedVia: 'url',
   }
 }

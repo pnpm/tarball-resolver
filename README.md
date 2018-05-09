@@ -26,7 +26,8 @@ resolveFromTarball({pref: 'http://registry.npmjs.org/is-array/-/is-array-1.0.1.t
   //    "normalizedPref": "http://registry.npmjs.org/is-array/-/is-array-1.0.1.tgz",
   //    "resolution": {
   //      "tarball": "http://registry.npmjs.org/is-array/-/is-array-1.0.1.tgz"
-  //    }
+  //    },
+  //    "resolvedVia": "url"
   //  }
 ```
 <!--/@-->

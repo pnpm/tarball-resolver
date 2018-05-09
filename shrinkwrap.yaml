@@ -1,4 +1,5 @@
 dependencies:
+  '@pnpm/resolver-base': 1.1.0
   '@pnpm/tarball-resolver': 'link:../__package_previews__/tarball-resolver/@pnpm/tarball-resolver'
   parse-npm-tarball-url: 1.0.3
 devDependencies:
@@ -24,12 +25,24 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-sYJOXPxpQxFcTSACFRFCuIQdnZLNaOgTHGF+CQNYlKnlc2ZnmEW+lAZVTc0hJSU+8mnTY7ei39MbYpI5q+li+w==
+  /@pnpm/resolver-base/1.1.0:
+    dependencies:
+      '@pnpm/types': 1.7.0
+    dev: false
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha512-YRUmjy2mR7Qk0r3xCUs0UkWLwRM2Mu2Fjyl2513PNlzsjDFG1xw4lbHRuz/bCMeN+ZKynJbIbfSW0ddMitfbgA==
   /@pnpm/self-installer/2.0.3:
     dev: true
     engines:
       node: '>=4'
     resolution:
       integrity: sha512-Awzcm+UsGmUZaZXkLH5efJEos9UICA4PIXpedyiY7Mg4LXVUtrGtX/jYNkuxj3x/bwh+7LnEvbBV4GpscxsFjw==
+  /@pnpm/types/1.7.0:
+    dev: false
+    resolution:
+      integrity: sha512-pn7g4uxcofWTNG/cxmKvkMK2lxr4OUIhrQDrEVYEdVhW0WkWztsHkFrYjFgfNzPbYu3ITlB3T6aSVjCoJQTOlw==
   /@types/fs-extra/5.0.2:
     dependencies:
       '@types/node': 10.0.6
@@ -3006,6 +3019,7 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 5
 shrinkwrapVersion: 3
 specifiers:
+  '@pnpm/resolver-base': ^1.1.0
   '@types/tape': ^4.2.31
   mos: ^2.0.0-alpha.3
   mos-plugin-readme: ^1.0.4
