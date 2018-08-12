@@ -5,7 +5,7 @@ test('tarball from npm registry', async t => {
   const resolutionResult = await resolveFromTarball({pref: 'http://registry.npmjs.org/is-array/-/is-array-1.0.1.tgz'})
 
   t.deepEqual(resolutionResult, {
-    id: 'registry.npmjs.org/is-array/1.0.1',
+    id: 'registry.npmjs.org/is-array/-/is-array-1.0.1',
     normalizedPref: 'http://registry.npmjs.org/is-array/-/is-array-1.0.1.tgz',
     resolution: {
       tarball: 'http://registry.npmjs.org/is-array/-/is-array-1.0.1.tgz',

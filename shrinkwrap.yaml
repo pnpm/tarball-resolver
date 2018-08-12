@@ -1,6 +1,6 @@
 dependencies:
   '@pnpm/resolver-base': 1.1.0
-  parse-npm-tarball-url: 1.0.3
+  '@pnpm/tarball-resolver': 'link:../__package_previews__/tarball-resolver/@pnpm/tarball-resolver'
 devDependencies:
   '@types/tape': 4.2.32
   mos: 2.0.0-alpha.3
@@ -68,10 +68,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-8TqvB0ReZWwtcd3LXq3YSrBoLyXFgBX/sBZfGye9+YS8zH7/g+i6QRIuiDmwBoTzcQ/pk89nZYTYU4c5akKkzw==
-  /@types/node/9.6.24:
-    dev: false
-    resolution:
-      integrity: sha512-o5K0mt8x735EaqS7F2x+5AG0b1Mt3V9jgV5SeW8SD6RNhE++dvwqLf2R2e4c8FmhNLaogz2oXrsiXnqnsBSSIQ==
   /@types/tape/4.2.32:
     dependencies:
       '@types/node': 10.5.4
@@ -1965,15 +1961,6 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-VjRtR0nXjyNDDKDHE4UK75GqNh0=
-  /parse-npm-tarball-url/1.0.3:
-    dependencies:
-      '@types/node': 9.6.24
-      semver-regex: 1.0.0
-    dev: false
-    engines:
-      node: '>=4'
-    resolution:
-      integrity: sha512-LNiNoG41t4SeUu3p8aEpQatMVbfLxc600UD0urKMz09vHzz2+w0nWLs6k8rnk5eZ1tpCNkMzaMAzFTsNWMrIWg==
   /path-exists/2.1.0:
     dependencies:
       pinkie-promise: 2.0.1
@@ -2395,12 +2382,6 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-S7uEN8jTfksM8aaP1ybsbWRdbTY=
-  /semver-regex/1.0.0:
-    dev: false
-    engines:
-      node: '>=0.10.0'
-    resolution:
-      integrity: sha1-kqSWkGX5xwxpR1PVUkj8aPj2Usk=
   /semver/5.5.0:
     dev: true
     hasBin: true
@@ -3051,7 +3032,6 @@ specifiers:
   mos: ^2.0.0-alpha.3
   mos-plugin-readme: ^1.0.4
   package-preview: ^1.0.1
-  parse-npm-tarball-url: ^1.0.1
   rimraf: ^2.6.2
   tape: ^4.8.0
   ts-node: ^7.0.0
