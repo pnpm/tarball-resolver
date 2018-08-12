@@ -3,12 +3,13 @@ import parseNpmTarballUrl from 'parse-npm-tarball-url'
 
 export default async function resolveTarball (
   wantedDependency: {pref: string},
+  opts: { registry: string },
 ): Promise<ResolveResult | null> {
   if (!wantedDependency.pref.startsWith('http:') && !wantedDependency.pref.startsWith('https:')) {
     return null
   }
 
-  if (wantedDependency.pref.startsWith('http://registry.npmjs.org/')) {
+  if (wantedDependency.pref.startsWith(opts.registry)) {
     const parsed = parseNpmTarballUrl(wantedDependency.pref)
     if (parsed) {
       return {

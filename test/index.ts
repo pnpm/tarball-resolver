@@ -1,8 +1,12 @@
 import test = require('tape')
 import resolveFromTarball from '@pnpm/tarball-resolver'
 
-test('tarball from npm registry', async t => {
-  const resolutionResult = await resolveFromTarball({pref: 'http://registry.npmjs.org/is-array/-/is-array-1.0.1.tgz'})
+test('tarball from default registry', async t => {
+  const resolutionResult = await resolveFromTarball({
+    pref: 'http://registry.npmjs.org/is-array/-/is-array-1.0.1.tgz',
+  }, {
+    registry: 'http://registry.npmjs.org/',
+  })
 
   t.deepEqual(resolutionResult, {
     id: 'registry.npmjs.org/is-array/1.0.1',
@@ -17,7 +21,11 @@ test('tarball from npm registry', async t => {
 })
 
 test('tarball not from npm registry', async t => {
-  const resolutionResult = await resolveFromTarball({pref: 'https://github.com/hegemonic/taffydb/tarball/master'})
+  const resolutionResult = await resolveFromTarball({
+    pref: 'https://github.com/hegemonic/taffydb/tarball/master',
+  },  {
+    registry: 'http://registry.npmjs.org/',
+  })
 
   t.deepEqual(resolutionResult, {
     id: 'github.com/hegemonic/taffydb/tarball/master',
@@ -32,7 +40,11 @@ test('tarball not from npm registry', async t => {
 })
 
 test('tarballs from GitHub (is-negative)', async t => {
-  const resolutionResult = await resolveFromTarball({pref: 'https://github.com/kevva/is-negative/archive/1d7e288222b53a0cab90a331f1865220ec29560c.tar.gz'})
+  const resolutionResult = await resolveFromTarball({
+    pref: 'https://github.com/kevva/is-negative/archive/1d7e288222b53a0cab90a331f1865220ec29560c.tar.gz',
+  }, {
+    registry: 'http://registry.npmjs.org/',
+  })
 
   t.deepEqual(resolutionResult, {
     id: 'github.com/kevva/is-negative/archive/1d7e288222b53a0cab90a331f1865220ec29560c.tar.gz',
