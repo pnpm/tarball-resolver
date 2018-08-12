@@ -1,6 +1,5 @@
 dependencies:
   '@pnpm/resolver-base': 1.1.0
-  '@pnpm/tarball-resolver': 'link:../__package_previews__/tarball-resolver/@pnpm/tarball-resolver'
   parse-npm-tarball-url: 1.0.3
 devDependencies:
   '@types/tape': 4.2.32
