@@ -1,3 +1,5 @@
+> this package was moved to https://github.com/pnpm/pnpm
+
 # @pnpm/tarball-resolver
 
 > Resolver for tarball dependencies
